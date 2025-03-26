@@ -1,12 +1,12 @@
 import sys
 from collections import defaultdict
 
-def parse_terms(s):
+def parse_terms(s: str):
     s = s.replace('-', '+-')
     terms = s.split('+')
     return [t.strip() for t in terms if t.strip()]
 
-def parse_term(term_str):
+def parse_term(term_str: str):
     if '*' not in term_str:
         coeff_str = term_str.strip()
         try:
